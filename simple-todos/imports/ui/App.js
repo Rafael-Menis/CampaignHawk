@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Task from './Task';
+import Task from './Task.js';
 
 // App component, represents the whole app
 export default class App extends Component {
