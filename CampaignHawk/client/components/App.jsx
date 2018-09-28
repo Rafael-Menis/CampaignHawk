@@ -7,13 +7,13 @@ import { Meteor } from 'meteor/meteor';
 
 const App = () => (
     <Router>
+    <div>
         <Switch>
-            <div>
             <Route exact path="/" component={Map} />
             <Route path="login" component={Login} />
             <Route component={AppNotFound} />
-            </div>
         </Switch>
+    </div>
     </Router>
 );
 
