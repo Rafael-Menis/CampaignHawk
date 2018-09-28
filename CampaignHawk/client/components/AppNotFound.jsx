@@ -1,7 +1,9 @@
 import React from 'react';
 
 const AppNotFound = () => (
-    <h1>Error!</h1>
+   <div>
+       <h1>Error!</h1>
+   </div>
 )
 
 export default AppNotFound
