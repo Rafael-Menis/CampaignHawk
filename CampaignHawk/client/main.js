@@ -7,7 +7,7 @@ import App from '../imports/startup/Client/components/App';
 import '../imports/startup/Client/main.html';
 
 Meteor.startup (() => {
-  render ((
+  ReactDOM.render ((
   <Router>
     <App />
   </Router>
