@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Switch, Route} from 'react-router-dom';
 import Map from './Map';
 import Login from './Login';
 import AppNotFound from './AppNotFound';
 import { Meteor } from 'meteor/meteor';
 
-class App extends Component {
+export default class App extends Component {
     render() {
       return (
         <Switch>
@@ -16,5 +16,3 @@ class App extends Component {
       );
     }
   }
-  
-export default App
