@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const SideNav = () => (
     <Router>
-        <div>
+        <div id="sidenav">
          <ul>
             <li>
                 items
