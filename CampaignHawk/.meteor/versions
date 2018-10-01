@@ -42,10 +42,11 @@ launch-screen@1.1.1
 livedata@1.0.18
 localstorage@1.2.0
 logging@1.1.20
-mdg:validated-method@1.1.0
+mdg:validated-method@1.2.0
 meteor@1.9.2
 meteor-base@1.4.0
 meteoreact:accounts@1.2.3
+minifier-css@1.4.0-rc18.16
 minifier-js@2.4.0-rc18.16
 minimongo@1.4.5
 mobile-experience@1.0.5
@@ -68,6 +69,7 @@ reactive-var@1.0.11
 reload@1.2.0
 retry@1.1.0
 routepolicy@1.1.0-rc18.16
+seba:minifiers-autoprefixer@1.1.1
 service-configuration@1.0.11
 sha@1.0.9
 shell-server@0.4.0-rc18.16

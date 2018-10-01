@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.0.0",
-    "autoprefixer": "^6.5.4",
+    "autoprefixer": "^9.1.5",
     "bcrypt": "^3.0.1",
     "meteor-node-stubs": "^0.4.1",
     "react": "^16.5.2",
@@ -17,12 +17,7 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1"
   },
-  "browserslist": [
-    "last 1 version",
-    "> 1%",
-    "maintained node versions",
-    "not dead"
-  ],
+
   "meteor": {
     "mainModule": {
       "client": "client/main.js",
