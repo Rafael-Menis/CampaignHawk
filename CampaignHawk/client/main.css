@@ -1,3 +1,4 @@
+@import "../imports/startup/Client/styles/styles.scss";
 body {
   padding: 10px;
   font-family: sans-serif;
