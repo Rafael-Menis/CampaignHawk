@@ -12,3 +12,25 @@ body, p, h1, h2, h3, h4, ul, li {
     width: 60px;
     height: 100vh;
 }
+
+.sidenav-list {
+    &:first-child {
+        padding-top: 20px;
+    }
+    list-style-type: none;
+}
+
+.sidenav-list-item {
+    cursor: pointer;
+    padding: 20px;
+    display: flex;
+    opacity: 0.54;
+    font-size: 1.6em;
+    justify-content: center;
+}
+
+.map {
+    position: inherit;
+    margin-left: 55px;
+    background-color:blue;
+}
