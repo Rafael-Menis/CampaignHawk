@@ -30,15 +30,39 @@ library.add(far)
             )
         })
 
-const SideNav = () => (
+class SideNav extends Component {
+    constructor(props) {
+        super(props);
+        this.state= {displayTooltip: false, tooltipX: "50px", tooltipY: "0px"};
+        this.hideTooltip = this.hideTooltip.bind(this)
+        this.showTooltip = this.showTooltip.bind(this)
+    } 
+
+    hideTooltip (e) {
+        this.setState({displayTooltip: false})
+    }
+
+    showTooltip (e) {
+        this.setState({displayTooltip: true,
+            tooltipY: e.nativeEvent.target.offsetTop +
+            (e.nativeEvent.target.offsetHeight / 2) + "px"
+        })
+    }
+
+    render () {
+        return (
     <Router>
-        <div className="sidenav">
-         <ul className="sidenav-list">
-           {list}
-         </ul>
-        </div>
+    <div className="sidenav">
+     <ul className="sidenav-list">
+       {list}
+     </ul>
+    </div>
     </Router>
-)
+    )
+    }
+} 
+    
+
 const Map = () => (
     <Router>
     <div className="map">

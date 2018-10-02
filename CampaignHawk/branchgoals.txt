@@ -7,3 +7,5 @@ show when I mouseover a sidenav icon. This will require state.
 
 In order to use state, I have to extend a component- ideally,
 a higher level one so later ones can import it.
+
+It's possible that I could use portals.
