@@ -66,8 +66,8 @@ class SideNav extends Component {
 
     showTooltip (e) {
         this.setState({displayTooltip: true,
-            tooltipY: e.nativeEvent.target.offsetTop +
-            (e.nativeEvent.target.offsetHeight / 2) + "px"
+            tooltipY: e.target.offsetTop +
+            (e.target.offsetHeight / 2) + "px"
         })
     }
 
