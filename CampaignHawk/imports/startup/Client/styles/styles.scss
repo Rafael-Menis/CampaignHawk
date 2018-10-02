@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 $font-stack: 'Open Sans', sans-serif;
+$default-text-color: rgba (107,117,139,1);
 
 body, p, h1, h2, h3, h4, ul, li {
     font-family: $font-stack;
@@ -37,4 +38,36 @@ body, p, h1, h2, h3, h4, ul, li {
     position: inherit;
     margin-left: 55px;
     background-color:blue;
+}
+
+.tooltipstyle {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    background-color: #fff;
+    height: 3em;
+    width: 150px;
+    padding-bottom: 4px;
+    margin-left: 30px;
+    position: absolute;
+    box-shadow: 0px 2px 8px 0px #888;
+    visibility: hidden;
+    display: none;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+
+.tooltipstyle p {
+    color: $default-text-color;
+    font-size: 1.5em;
+    padding: 10px;
+    align-self: center;
+}
+
+.tooltipstyle .tail {
+    border: 10px solid;
+    border-color: transparent #fff transparent transparent;
+    position: absolute;
+    top: 13px;
+    left: -20px;
 }

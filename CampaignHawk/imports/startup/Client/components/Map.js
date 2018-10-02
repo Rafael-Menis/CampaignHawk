@@ -10,6 +10,8 @@ library.add(fas)
 library.add(far)
 /* React Router Dom v4 allows for creating nav links with built in styling directly */
 
+class SideNavIcons extends Component {
+    render () {
         const iconList = [
             "database",
             "user-plus",
@@ -29,6 +31,26 @@ library.add(far)
                 </li>
             )
         })
+        return (
+            <div>
+                {list}
+            </div>
+            
+        )
+    }
+}
+       
+
+class SidenavTooltip extends Component {
+    render () {
+        return (
+            <div className="tooltipstyle">
+                <p>Data Layer</p>
+                <div className="tail"></div>
+            </div>
+        )
+    }
+}
 
 class SideNav extends Component {
     constructor(props) {
@@ -53,8 +75,9 @@ class SideNav extends Component {
         return (
     <Router>
     <div className="sidenav">
+        <SidenavTooltip />
      <ul className="sidenav-list">
-       {list}
+       <SideNavIcons />
      </ul>
     </div>
     </Router>
