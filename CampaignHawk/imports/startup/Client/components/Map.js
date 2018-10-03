@@ -13,15 +13,15 @@ library.add(far)
 class SideNavIcons extends Component {
     render () {
         const iconList = [
-            {name: "database", description:""},
-            {name: "user-plus", description:""},
-            {name: "users", description:""},
-            {name: "bicycle", description:""},
-            {name: "list-ul", description:""},
-            {name: ["far", "lightbulb"], description:""},
-            {name: "list-ol", description:""},
-            {name: "chart-line", description:""},
-            {name: "cog", description:""}
+            {name: "database", description:"Data Layers"},
+            {name: "user-plus", description:"Add Volunteer"},
+            {name: "users", description:"View Volunteers"},
+            {name: "bicycle", description:"Dispatcher"},
+            {name: "list-ul", description:"View as List"},
+            {name: ["far", "lightbulb"], description:"Campaign Autopilot"},
+            {name: "list-ol", description:"Leaderboard"},
+            {name: "chart-line", description:"Fancy Charts"},
+            {name: "cog", description:"Settings"}
         ];
         /*Add in navlinks later */
         const list = iconList.map((item) => {
