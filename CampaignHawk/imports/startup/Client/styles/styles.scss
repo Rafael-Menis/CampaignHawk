@@ -40,7 +40,7 @@ body, p, h1, h2, h3, h4, ul, li {
     background-color:blue;
 }
 
-.tooltipstyle {
+.sidenav-tooltip {
     transition: opacity 0.3s ease;
     opacity: 0;
     background-color: #fff;
@@ -57,14 +57,14 @@ body, p, h1, h2, h3, h4, ul, li {
 }
 
 
-.tooltipstyle p {
+.sidenav-tooltip p {
     color: $default-text-color;
     font-size: 1.5em;
     padding: 10px;
     align-self: center;
 }
 
-.tooltipstyle .tail {
+.sidenav-tooltip .tail {
     border: 10px solid;
     border-color: transparent #fff transparent transparent;
     position: absolute;
