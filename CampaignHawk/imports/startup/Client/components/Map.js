@@ -13,21 +13,21 @@ library.add(far)
 class SideNavIcons extends Component {
     render () {
         const iconList = [
-            "database",
-            "user-plus",
-            "users",
-            "bicycle",
-            "list-ul",
-            ["far", "lightbulb"],
-            "list-ol",
-            "chart-line",
-            "cog"
+            {name: "database", description:""},
+            {name: "user-plus", description:""},
+            {name: "users", description:""},
+            {name: "bicycle", description:""},
+            {name: "list-ul", description:""},
+            {name: ["far", "lightbulb"], description:""},
+            {name: "list-ol", description:""},
+            {name: "chart-line", description:""},
+            {name: "cog", description:""}
         ];
         /*Add in navlinks later */
         const list = iconList.map((item) => {
             return (
-                <li key={item} className="sidenav-list-item">
-                    <FontAwesomeIcon icon={item} />
+                <li key={item.name} className="sidenav-list-item">
+                    <FontAwesomeIcon icon={item.name} />
                 </li>
             )
         })
