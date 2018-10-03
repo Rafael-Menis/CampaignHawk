@@ -26,7 +26,11 @@ class SideNavIcons extends Component {
         /*Add in navlinks later */
         const list = iconList.map((item) => {
             return (
-                <li key={item.name} className="sidenav-list-item">
+                <li key={item.name} 
+                    onMouseEnter={this.props.setTooltipDescription.bind(null, item)}
+                    onMouseOver={this.props.showTooltip}
+                    onMouseOut={this.props.hideTooltip}
+                    className="sidenav-list-item">
                     <FontAwesomeIcon icon={item.name} />
                 </li>
             )
