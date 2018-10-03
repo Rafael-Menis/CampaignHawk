@@ -54,7 +54,7 @@ class SidenavTooltip extends Component {
         if (this.props.showTooltipState) {
             tooltipStyle.opacity = "1";
             tooltipStyle.visibility = "visible";
-            tooltipStyle.display != "none" ;
+            tooltipStyle.display = "inline" ;
         } else {
             tooltipStyle.opacity = "0";
             tooltipStyle.visibility = "hidden";
