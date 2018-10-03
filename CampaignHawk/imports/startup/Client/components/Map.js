@@ -66,10 +66,18 @@ class SidenavTooltip extends Component {
 class SideNav extends Component {
     constructor(props) {
         super(props);
-        this.state= {displayTooltip: false, tooltipX: "50px", tooltipY: "0px"};
+        this.state= {displayTooltip: false, tooltipX: "50px", tooltipY: "0px",
+        tooltipDescription: ""};
         this.hideTooltip = this.hideTooltip.bind(this)
         this.showTooltip = this.showTooltip.bind(this)
+        this.setTooltipDescription = this.setTooltipDescription.bind(this)
     } 
+
+    setTooltipDescription (item) {
+        this.setState({
+            tooltipDescription: item.description
+        })
+    }
 
     hideTooltip (e) {
         this.setState({displayTooltip: false})
@@ -87,11 +95,13 @@ class SideNav extends Component {
     <Router>
     <div className="sidenav">
         <SidenavTooltip
+            tooltipDescription={this.state.tooltipDescription}
             showTooltip={this.state.showTooltip}
             tooltipX={this.state.tooltipX}
             tooltipY={this.state.tooltipY} />
      <ul className="sidenav-list">
        <SideNavIcons
+        setTooltipDescription={this.setTooltipDescription}
         showTooltip={this.showTooltip}
         hideTooltip={this.hideTooltip} />
      </ul>
