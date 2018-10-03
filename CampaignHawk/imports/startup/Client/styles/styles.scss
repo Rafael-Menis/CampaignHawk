@@ -45,7 +45,6 @@ body, p, h1, h2, h3, h4, ul, li {
     opacity: 0;
     background-color: #fff;
     height: 3em;
-    width: 150px;
     padding-bottom: 4px;
     margin-left: 30px;
     position: absolute;
@@ -59,6 +58,7 @@ body, p, h1, h2, h3, h4, ul, li {
 
 .sidenav-tooltip p {
     color: $default-text-color;
+    white-space: nowrap;
     font-size: 1.5em;
     padding: 10px;
     align-self: center;

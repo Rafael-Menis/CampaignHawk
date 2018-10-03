@@ -54,13 +54,14 @@ class SidenavTooltip extends Component {
         if (this.props.showTooltipState) {
             tooltipStyle.opacity = "1";
             tooltipStyle.visibility = "visible";
+            tooltipStyle.display != "none" ;
         } else {
             tooltipStyle.opacity = "0";
             tooltipStyle.visibility = "hidden";
         }
         return (
             <div className="sidenav-tooltip" style={tooltipStyle}>
-                <p>Data Layer</p>
+                <p>{this.props.tooltipDescription}</p>
                 <div className="tail"></div>
             </div>
         )
@@ -70,7 +71,7 @@ class SidenavTooltip extends Component {
 class SideNav extends Component {
     constructor(props) {
         super(props);
-        this.state= {displayTooltip: false, tooltipX: "50px", tooltipY: "0px",
+        this.state= {showTooltipState: false, tooltipX: "50px", tooltipY: "0px",
         tooltipDescription: ""};
         this.hideTooltip = this.hideTooltip.bind(this)
         this.showTooltip = this.showTooltip.bind(this)
@@ -84,11 +85,11 @@ class SideNav extends Component {
     }
 
     hideTooltip (e) {
-        this.setState({displayTooltip: false})
+        this.setState({showTooltipState: false})
     }
 
     showTooltip (e) {
-        this.setState({displayTooltip: true,
+        this.setState({showTooltipState: true,
             tooltipY: e.target.offsetTop +
             (e.target.offsetHeight / 2) + "px"
         })
@@ -100,7 +101,7 @@ class SideNav extends Component {
     <div className="sidenav">
         <SidenavTooltip
             tooltipDescription={this.state.tooltipDescription}
-            showTooltip={this.state.showTooltip}
+            showTooltipState={this.state.showTooltipState}
             tooltipX={this.state.tooltipX}
             tooltipY={this.state.tooltipY} />
      <ul className="sidenav-list">
