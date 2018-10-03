@@ -43,8 +43,19 @@ class SideNavIcons extends Component {
 
 class SidenavTooltip extends Component {
     render () {
+        const tooltipStyle = {
+            top: this.props.tooltipY,
+            left: this.props.tooltipX
+        }
+        if (this.props.showTooltipState) {
+            tooltipStyle.opacity = "1";
+            tooltipStyle.visibility = "visible";
+        } else {
+            tooltipStyle.opacity = "0";
+            tooltipStyle.visibility = "hidden";
+        }
         return (
-            <div className="tooltipstyle">
+            <div className="sidenav-tooltip" style={tooltipStyle}>
                 <p>Data Layer</p>
                 <div className="tail"></div>
             </div>
@@ -75,9 +86,14 @@ class SideNav extends Component {
         return (
     <Router>
     <div className="sidenav">
-        <SidenavTooltip />
+        <SidenavTooltip
+            showTooltip={this.state.showTooltip}
+            tooltipX={this.state.tooltipX}
+            tooltipY={this.state.tooltipY} />
      <ul className="sidenav-list">
-       <SideNavIcons />
+       <SideNavIcons
+        showTooltip={this.showTooltip}
+        hideTooltip={this.hideTooltip} />
      </ul>
     </div>
     </Router>
