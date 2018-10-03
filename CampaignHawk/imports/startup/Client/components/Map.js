@@ -10,35 +10,113 @@ library.add(fas)
 library.add(far)
 /* React Router Dom v4 allows for creating nav links with built in styling directly */
 
+class SideNavIcons extends Component {
+    render () {
         const iconList = [
-            "database",
-            "user-plus",
-            "users",
-            "bicycle",
-            "list-ul",
-            ["far", "lightbulb"],
-            "list-ol",
-            "chart-line",
-            "cog"
+            {name: "database", description:"Data Layers"},
+            {name: "user-plus", description:"Add Volunteer"},
+            {name: "users", description:"View Volunteers"},
+            {name: "bicycle", description:"Dispatcher"},
+            {name: "list-ul", description:"View as List"},
+            {name: ["far", "lightbulb"], description:"Campaign Autopilot"},
+            {name: "list-ol", description:"Leaderboard"},
+            {name: "chart-line", description:"Fancy Charts"},
+            {name: "cog", description:"Settings"}
         ];
         /*Add in navlinks later */
         const list = iconList.map((item) => {
             return (
-                <li key={item} className="sidenav-list-item">
-                    <FontAwesomeIcon icon={item} />
+                <li key={item.name} 
+                    onMouseEnter={this.props.setTooltipDescription.bind(null, item)}
+                    onMouseOver={this.props.showTooltip}
+                    onMouseOut={this.props.hideTooltip}
+                    className="sidenav-list-item">
+                    <FontAwesomeIcon icon={item.name} />
                 </li>
             )
         })
+        return (
+            <div>
+                {list}
+            </div>
+            
+        )
+    }
+}
+       
 
-const SideNav = () => (
+class SidenavTooltip extends Component {
+    render () {
+        const tooltipStyle = {
+            top: this.props.tooltipY,
+            left: this.props.tooltipX
+        }
+        if (this.props.showTooltipState) {
+            tooltipStyle.opacity = "1";
+            tooltipStyle.visibility = "visible";
+            tooltipStyle.display != "none" ;
+        } else {
+            tooltipStyle.opacity = "0";
+            tooltipStyle.visibility = "hidden";
+        }
+        return (
+            <div className="sidenav-tooltip" style={tooltipStyle}>
+                <p>{this.props.tooltipDescription}</p>
+                <div className="tail"></div>
+            </div>
+        )
+    }
+}
+
+class SideNav extends Component {
+    constructor(props) {
+        super(props);
+        this.state= {showTooltipState: false, tooltipX: "50px", tooltipY: "0px",
+        tooltipDescription: ""};
+        this.hideTooltip = this.hideTooltip.bind(this)
+        this.showTooltip = this.showTooltip.bind(this)
+        this.setTooltipDescription = this.setTooltipDescription.bind(this)
+    } 
+
+    setTooltipDescription (item) {
+        this.setState({
+            tooltipDescription: item.description
+        })
+    }
+
+    hideTooltip (e) {
+        this.setState({showTooltipState: false})
+    }
+
+    showTooltip (e) {
+        this.setState({showTooltipState: true,
+            tooltipY: e.target.offsetTop +
+            (e.target.offsetHeight / 2) + "px"
+        })
+    }
+
+    render () {
+        return (
     <Router>
-        <div className="sidenav">
-         <ul className="sidenav-list">
-           {list}
-         </ul>
-        </div>
+    <div className="sidenav">
+        <SidenavTooltip
+            tooltipDescription={this.state.tooltipDescription}
+            showTooltipState={this.state.showTooltipState}
+            tooltipX={this.state.tooltipX}
+            tooltipY={this.state.tooltipY} />
+     <ul className="sidenav-list">
+       <SideNavIcons
+        setTooltipDescription={this.setTooltipDescription}
+        showTooltip={this.showTooltip}
+        hideTooltip={this.hideTooltip} />
+     </ul>
+    </div>
     </Router>
-)
+    )
+    }
+} 
+    
+
 const Map = () => (
     <Router>
     <div className="map">

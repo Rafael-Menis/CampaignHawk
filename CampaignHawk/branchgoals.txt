@@ -1,0 +1,11 @@
+This is a text document to hold the goals of the current git branch.
+
+Right now, that's implementing tooltips on the sidenav.
+
+In order to do this, I need to create tooltips, and have them
+show when I mouseover a sidenav icon. This will require state.
+
+In order to use state, I have to extend a component- ideally,
+a higher level one so later ones can import it.
+
+It's possible that I could use portals.
