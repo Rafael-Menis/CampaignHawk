@@ -5,7 +5,7 @@ export default class Modal extends Component {
         return (
             <div className="modal-active-darken">
                 <div className="modal-container">
-
+                    <AddVolunteerModalContent />
                 </div>
             </div>
         )
@@ -13,13 +13,16 @@ export default class Modal extends Component {
 }
 
 
-export default class AddVolunteerModalContent extends Component {
+class AddVolunteerModalContent extends Component {
     render () {
         return (
             <div>
                 <div className="volunteer-form-row">
                     <div className="volunteer-form-column-55">
-
+                        <input type="text" placeholder="First name" />
+                        <input type="text" placeholder="Last name" />
+                        <input type="email" placeholder="Email" />
+                        <input type="text" placeholder="Phone" />
                     </div>
                     <div className="volunteer-form-column-45">
 
@@ -31,7 +34,7 @@ export default class AddVolunteerModalContent extends Component {
                     </div>
                 </div>
                 <div className="submit-modal-buttons">
-                    
+
                 </div>
             </div>
         )
