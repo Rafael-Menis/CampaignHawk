@@ -124,3 +124,21 @@ body, p, h1, h2, h3, h4, ul, li {
         flex-direction: row-reverse;
     }
 }
+
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #888;
+    border-radius: 0;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0;
+    box-shadow: none;
+    transition: all .3s;
+    &:focus {
+        border-bottom: 1px solid green;
+        box-shadow: 0 1px 0 0 green;
+    }
+}
