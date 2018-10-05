@@ -121,8 +121,9 @@ const Map = () => (
     <Router>
     <div className="map">
     <SideNav />
-   
+   <div className="content-wrapper">
     <h1>This is where the map goes</h1>
+    </div>
     </div>
     </Router>
 )
