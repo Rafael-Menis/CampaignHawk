@@ -25,7 +25,10 @@ class AddVolunteerModalContent extends Component {
                         <input type="text" placeholder="Phone" />
                     </div>
                     <div className="volunteer-form-column-45">
-
+                        <div className="profile-image-wrapper">
+                            <img src="https://goo.gl/PoNcsv" />
+                        </div>
+                        <button className="button">Upload Photo</button>
                     </div>
                 </div>
                 <div className="volunteer-form-row">

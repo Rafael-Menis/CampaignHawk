@@ -110,6 +110,14 @@ body, p, h1, h2, h3, h4, ul, li {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        .profile-image-wrapper {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
     }
     .volunteer-form-column-100 {
         width: 100%;
@@ -122,9 +130,45 @@ body, p, h1, h2, h3, h4, ul, li {
     .submit-modal-buttons {
         display: flex;
         flex-direction: row-reverse;
-    }
+        
 }
 
+.button, .button-flat {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    outline: 0;
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: $default-text-color;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: lighten(#6b758b, 5%);
+        box-shadow: 2px 2px 2px 0px #888;
+    }
+}
+.button-flat {
+    box-shadow: none;
+    background-color: transparent;
+    color: $default-text-color;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    &:hover {
+        color: white;
+        background-color: $default-text-color;
+    }
+}
+}
 input {
     background-color: transparent;
     border: none;
