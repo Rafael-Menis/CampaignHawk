@@ -126,13 +126,22 @@ body, p, h1, h2, h3, h4, ul, li {
         box-sizing: border-box;
         align-self: center;
         height: 150px;
+        textarea {
+            background-color: white;
+            width: 93%;
+            height: 100%;
+            font-size: 1rem;
+            border-radius: 2px;
+            border: 1px solid #888;
+        }
     }
-    .submit-modal-buttons {
+}    
+.submit-modal-buttons {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: center;
         
 }
-
 .button, .button-flat {
     border: none;
     border-radius: 2px;
@@ -146,7 +155,7 @@ body, p, h1, h2, h3, h4, ul, li {
 .button {
     text-decoration: none;
     color: white;
-    background-color: $default-text-color;
+    background-color: #6b758b;
     text-align: center;
     letter-spacing: .5px;
     transition: all 0.2s ease;
@@ -164,11 +173,11 @@ body, p, h1, h2, h3, h4, ul, li {
     transition: all 0.2s ease;
     white-space: nowrap;
     &:hover {
+        background-color: #6b758b;
         color: white;
-        background-color: $default-text-color;
     }
 }
-}
+
 input {
     background-color: transparent;
     border: none;
@@ -184,5 +193,17 @@ input {
     &:focus {
         border-bottom: 1px solid green;
         box-shadow: 0 1px 0 0 green;
+    }
+}
+
+.close-modal-x {
+    position: absolute;
+    font-size: 1.5em;
+    top: 5px;
+    right: 0px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    &:hover {
+        color: #888;
     }
 }

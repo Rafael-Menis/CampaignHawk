@@ -28,16 +28,18 @@ class AddVolunteerModalContent extends Component {
                         <div className="profile-image-wrapper">
                             <img src="https://goo.gl/PoNcsv" />
                         </div>
-                        <button className="button">Upload Photo</button>
+                        <button className="button-flat">Upload Photo</button>
+                        <div className="close-modal-x">&times;</div>
                     </div>
                 </div>
                 <div className="volunteer-form-row">
                     <div className="volunteer-form-column-100">
-
+                        <textarea placeholder="Additional notes" />
                     </div>
                 </div>
                 <div className="submit-modal-buttons">
-
+                    <button className="button">Submit</button>
+                    <button className="button-flat">Discard</button>
                 </div>
             </div>
         )
